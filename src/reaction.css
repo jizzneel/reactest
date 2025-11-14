@@ -77,13 +77,24 @@ header {
 }
 
 #playAgainButton {
+    width: 500px;
+    height: 50px;
+    letter-spacing: 10px;
+    font-size: 20px;
+    font-style: italic;
     background-color: limegreen;
     color: white;
     padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
+    border: 2px solid;
+    border-image: linear-gradient(to right, rgb(122, 244, 94), rgb(24, 72, 2)) 1;
+    border-radius: 50px;
     cursor: pointer;
     margin-top: 200px;
+}
+
+.reaction-output {
+    font-size: 30px;
+    font-weight: bold;
 }
 
 /* holy shi who would have actually thought a css stylesheet would be 70+ lines of code :skull: */
