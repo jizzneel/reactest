@@ -3,6 +3,7 @@ html, body {
     padding: 0;
     height: 100%;
     overflow: hidden; /* prevents scrolling, so the webpage seems to fill up more. */
+    font-family: "Orbitron", sans-serif;
 }
 
 .container {
@@ -23,6 +24,24 @@ header {
     height: 80px;
     line-height: 40px;
 }
+
+/* rt-list is for reaction time categories found in the html */
+
+.rt-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.rt-list li {
+    display: flex;
+    justify-content: space-between;
+    width: 260px;   
+    margin-bottom: 8px;
+    font-family: "Orbitron", sans-serif;
+    font-weight: bold;
+}
+
 
 .content {
     display: flex;
@@ -74,6 +93,7 @@ header {
     box-sizing: border-box;
     position: relative;
     transition: all 0.1s linear;
+    font-family: "Orbitron", sans-serif;
 }
 
 #playAgainButton {
@@ -88,6 +108,7 @@ header {
     border-image: linear-gradient(to right, rgb(122, 244, 94), rgb(24, 72, 2)) 1;
     cursor: pointer;
     margin-top: 200px;
+    font-family: "Orbitron", sans-serif;
 }
 
 .reaction-output {

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reaction.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <title>Reaction Time Tester</title>
 </head>
 <body>
@@ -13,23 +14,24 @@
     <header>Reaction Time Tester</header>
     <div class="content">
       <aside class="instructions">
-        <h2>How to Play</h2>
+        <h2><u>How to Play?</u></h2>
         <p>Click when the screen turns green!</p>
-        <h3>Reaction Time Categories</h3>
-        <ul>
-          <li><b>100-120ms: </b>godspeed 🔥</li>
-          <li><b>300-750ms: </b>average 💔</li>
-          <li><b>750ms+: </b>not tuff 🥀</li>
+        <h3><u>Reaction Time Categories</u></h3>
+        <ul class="rt-list">
+          <li><span>exceptional:</span><span>≤180 ms</span></li>
+          <li><span>quick:</span><span>180-240 ms</span></li>
+          <li><span>average:</span><span>240-300 ms</span></li>
+          <li><span>slow:</span><span>≥300 ms</span></li>
         </ul>
       </aside>
 
       <main class="game">
-        <div class="reaction-output too-soon-alert"></div>
+        <div class="reaction-output"></div>
         <p class="hide-on-start"><b>Click start when you are ready!</b></p>
         <button id="startButton" class="hide-on-start">Start</button>
         <button id="playAgainButton" style="display: none;"><b>play  again 😏</b></button>
         <div class="message"></div>
-        <div class="alert"></div>
+        <div class="too-soon-alert"></div>
       </main>
     </div>
   </div>
