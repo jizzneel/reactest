@@ -1,9 +1,23 @@
+:root {
+    --bg: white;
+    --text: black;
+    --panel: #f0f0f0;
+}
+
+.dark {
+    --bg: #111;
+    --text: #eee;
+    --panel: #1b1b1b;
+}
+
 html, body {
     margin: 0;
     padding: 0;
     height: 100%;
     overflow: hidden; /* prevents scrolling, so the webpage seems to fill up more. */
     font-family: "Orbitron", sans-serif;
+    background: var(--bg);
+    color: var(--text);
 }
 
 .container {
@@ -16,8 +30,8 @@ html, body {
 }
 
 header {
-    background-color: black;
-    color: white;
+    background-color: var(--text);
+    color: var(--bg);
     text-align: center;
     padding: 20px;
     font-size: 30px;
@@ -55,6 +69,7 @@ header {
     padding: 20px;
     border-right: 2px solid black;
     box-sizing: border-box;
+    background-color: var(--panel);
 }
 
 #startButton {
@@ -94,6 +109,7 @@ header {
     position: relative;
     transition: all 0.1s linear;
     font-family: "Orbitron", sans-serif;
+    background-color: var(--panel);
 }
 
 #playAgainButton {
