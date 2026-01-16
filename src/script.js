@@ -4,15 +4,6 @@ const playAgainButton = document.getElementById("playAgainButton");
 const game = document.querySelector(".game"); // dont forget the . in front (class)
 const tooSoonAlert = document.querySelector(".too-soon-alert");
 const darkModeBtn = document.getElementById("darkModeButton")
-const exceptionalCategory = document.getElementById("exceptional")
-const quickCategory = document.getElementById("quick")
-const averageCategory = document.getElementById("average")
-const slowCategory = document.getElementById("slow")
-const exceptionalFeedback = ["Lightning fast!", "Wow, impressive!", "Exceptional reflexes!", "You're a speedster!"];
-const quickFeedback = ["Pretty quick!", "Nice reaction!", "Solid reflexes!", "Good job!"];
-const averageFeedback = ["Not bad!", "Could be quicker!", "Keep practicing!", "Average, but steady!"];
-const slowFeedback = ["Too slow!", "Better luck next time!", "Work on your reflexes!", "Try again!"];
-
 
 let startTime;
 let greenShown = false;
