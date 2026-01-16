@@ -8,6 +8,7 @@ const darkModeBtn = document.getElementById("darkModeButton")
 let startTime;
 let greenShown = false;
 let greenTimeout;
+let categories = [exceptionalCategory, quickCategory, averageCategory, slowCategory];
 
 // measures user's reaction time
 function measureReactionTime() {
@@ -21,6 +22,13 @@ function measureReactionTime() {
 
   // play again button + resetting game upon clicked
   playAgainButton.style.display = "inline-block";
+
+  // clear any previous highlights
+  clearHighlight()
+
+  // highlight the correct category based on reaction time
+  addHighlight(reactionTime);
+
 }
 
 // resetting the game
@@ -29,6 +37,7 @@ function resetGame() {
   for (const el of hideElements) el.style.display = "block";
   game.style.backgroundColor = '';
   document.querySelector(".reaction-output").textContent = "";
+  document.querySelector(".reaction-feedback").textContent = ""; // clears feedback here
   greenShown = false;
 }
 
@@ -83,3 +92,38 @@ darkModeBtn.addEventListener("click", () => {
     darkModeBtn.textContent = "dark mode";
   }
 });
+
+function clearHighlight() {
+  for (const category of categories) {
+    category.classList.remove("active-category");
+  }
+
+}
+
+function addHighlight(reactionTime) {
+  let feedbackArray;
+
+  if (reactionTime <= 180) {
+    exceptionalCategory.classList.add("active-category");
+    feedbackArray = exceptionalFeedback;
+  }
+  else if (reactionTime <= 240) {
+    quickCategory.classList.add("active-category");
+    feedbackArray = quickFeedback;
+  }
+  else if (reactionTime <= 300) {
+    averageCategory.classList.add("active-category");
+    feedbackArray = averageFeedback;
+  }
+  else {
+    slowCategory.classList.add("active-category");
+    feedbackArray = slowFeedback;
+  }
+// picking random phrase from the feedback arrays.
+
+const randomIndex = Math.floor(Math.random() * feedbackArray.length);
+const feedback = feedbackArray[randomIndex];
+
+document.querySelector(".reaction-feedback").textContent = feedback;  
+}
+
